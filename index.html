@@ -11,6 +11,8 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- custom CSS -->
     <link rel="stylesheet" href="./style.css">
+    <!-- vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> 
 </head>
 
 <body>
@@ -20,7 +22,7 @@
                 <div class="col-12 mt-3 text-center">
                     <h1>ToDoList</h1>
                     <ul class="list-group">
-                        <li class="list-group-item" >
+                        <li v-for="(element , index) in todos" :class="{done: element.done === true}"></li>
                             
                         </li>
                     </ul>
